@@ -63,6 +63,12 @@
             color: #27ae60;
             font-weight: bold;
             text-transform: uppercase;
+           
+        .status-gagal {
+            color: #e74c3c; /* Warna merah */
+            font-weight: bold;
+            text-transform: uppercase;
+        }
         }
         
         .btn-print {
@@ -91,7 +97,7 @@
     <div class="header-laporan">
         <div style="display: flex; justify-content: space-between; align-items: center;">
             <div>
-                <h2>Laporan Hasil Seleksi PMB 2025</h2>
+                <h2>Laporan Hasil Seleksi PMB 2026</h2>
                 <p>Status: <strong>Periode Gelombang 1</strong></p>
             </div>
             <button class="btn-print" onclick="window.print()">Cetak Laporan (PDF)</button>
@@ -120,17 +126,24 @@
                 </tr>
                 <tr>
                     <td>2</td>
-                    <td>Budi Santoso</td>
+                    <td>Jorong 1</td>
                     <td>REG-2025003</td>
                     <td>Teknologi Informasi</td>
                     <td><span class="status-lulus">LULUS</span></td>
                 </tr>
                 <tr>
                     <td>3</td>
-                    <td>Siti Aminah</td>
+                    <td>Jorong 2</td>
                     <td>REG-2025002</td>
                     <td>Manajemen</td>
                     <td><span class="status-lulus">LULUS</span></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Jorong 3</td>
+                    <td>REG-2025004</td>
+                    <td>Hukum</td>
+                    <td><span class="status-gagal">TIDAK LULUS</span></td>
                 </tr>
             </tbody>
         </table>
@@ -138,4 +151,5 @@
 </div>
 
 </body>
+
 </html>
