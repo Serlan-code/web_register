@@ -21,26 +21,15 @@
             width: 350px;
             text-align: center;
         }
-        .login-card h2 {
-            margin-bottom: 25px;
-            color: #2c3e50;
-        }
-        .input-group {
-            text-align: left;
-            margin-bottom: 15px;
-        }
-        .input-group label {
-            display: block;
-            margin-bottom: 5px;
-            font-size: 14px;
-            font-weight: bold;
-        }
+        .login-card h2 { margin-bottom: 25px; color: #2c3e50; }
+        .input-group { text-align: left; margin-bottom: 15px; }
+        .input-group label { display: block; margin-bottom: 5px; font-size: 14px; font-weight: bold; }
         .input-group input {
             width: 100%;
             padding: 10px;
             border: 1px solid #ccc;
             border-radius: 6px;
-            box-sizing: border-box; /* Biar input gak luber */
+            box-sizing: border-box;
         }
         .btn-login {
             width: 100%;
@@ -54,32 +43,24 @@
             transition: 0.3s;
             margin-top: 10px;
         }
-        .btn-login:hover {
-            background-color: #2980b9;
-        }
-        .back-home {
-            display: block;
-            margin-top: 20px;
-            text-decoration: none;
-            color: #7f8c8d;
-            font-size: 13px;
-        }
+        .btn-login:hover { background-color: #2980b9; }
+        .back-home { display: block; margin-top: 20px; text-decoration: none; color: #7f8c8d; font-size: 13px; }
     </style>
 </head>
 <body>
 
 <div class="login-card">
     <h2>Admin Login</h2>
-    <p style="font-size: 13px; color: #666; margin-bottom: 20px;">Silakan masuk untuk akses panel</p>
+    <p style="font-size: 13px; color: #666; margin-bottom: 20px;">Gunakan akun admin untuk akses panel</p>
     
-    <form action="admin.html">
+    <form id="loginForm">
         <div class="input-group">
             <label>Username</label>
-            <input type="text" placeholder="admin_alan" required>
+            <input type="text" id="username" placeholder="Masukkan Username" required>
         </div>
         <div class="input-group">
             <label>Password</label>
-            <input type="password" placeholder="••••••••" required>
+            <input type="password" id="password" placeholder="Masukkan Password" required>
         </div>
         
         <button type="submit" class="btn-login">LOG IN</button>
@@ -87,6 +68,24 @@
 
     <a href="index.html" class="back-home"> Kembali ke Beranda</a>
 </div>
+
+<script>
+    // Logika Login Custom Alan
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+        e.preventDefault(); // Mencegah form langsung pindah halaman
+
+        const user = document.getElementById('username').value;
+        const pass = document.getElementById('password').value;
+
+        // CEK USERNAME & PASSWORD DI SINI
+        if (user === "Admin" && pass === "12345") {
+            alert("Login Berhasil! Selamat datang Admin.");
+            window.location.href = "admin.html"; // Pindah ke dashboard
+        } else {
+            alert("Username atau Password Salah! Coba lagi ya.");
+        }
+    });
+</script>
 
 </body>
 </html>
