@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Pendaftaran Mahasiswa Baru</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #2c3e50;
+            padding: 15px;
+            text-align: center;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 500;
+        }
+
+        /* Container Utama */
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        hr { border: 0; border-top: 1px solid #eee; margin: 20px 0; }
+
+        /* Styling Tabel Form */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td {
+            padding: 12px 5px;
+            vertical-align: middle;
+        }
+
+        /* Styling Input, Select, & Textarea */
+        input[type="text"], 
+        input[type="email"], 
+        input[type="password"], 
+        input[type="date"], 
+        select, 
+        textarea {
+            width: 90%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            border-color: #3498db;
+            outline: none;
+            box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+        }
+
+        .btn-group {
+            margin-top: 20px;
+        }
+        
+        button {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button[type="submit"] {
+            background-color: #27ae60;
+            color: white;
+        }
+
+        button[type="submit"]:hover { background-color: #219150; }
+
+        button[type="reset"] {
+            background-color: #e74c3c;
+            color: white;
+            margin-left: 10px;
+        }
+
+        button[type="reset"]:hover { background-color: #c0392b; }
+
+        footer {
+            text-align: center;
+            font-size: 13px;
+            color: #7f8c8d;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <a href='index.html'>Beranda</a>
+    <a href='profilkampus.html'>Profil Kampus</a>
+    <a href='informasipendaftaran.html'>Informasi Pendaftaran</a>
+    <a href='kontak.html'>Kontak</a>
+</div>
+
+<div class="container">
+    <h1>FORM PENDAFTARAN MAHASISWA BARU</h1>
+    <hr>
+
+    <form action="sukses.html" method="GET">
+        <table>
+            <tr>
+                <td width="220"><strong>NIK</strong></td>
+                <td width="20">:</td>
+                <td><input type="text" name="nik" required></td>
+            </tr>
+            <tr>
+                <td><strong>NIM (Opsional)</strong></td>
+                <td>:</td>
+                <td><input type="text" name="nim"></td>
+            </tr>
+            <tr>
+                <td><strong>Nama Lengkap</strong></td>
+                <td>:</td>
+                <td><input type="text" name="nama" required></td>
+            </tr>
+            <tr>
+                <td><strong>Jenis Kelamin</strong></td>
+                <td>:</td>
+                <td>
+                    <select name="jk" required>
+                        <option value="">-- Pilih --</option>
+                        <option value="Laki-laki">Laki-laki</option>
+                        <option value="Perempuan">Perempuan</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Tempat Lahir</strong></td>
+                <td>:</td>
+                <td><input type="text" name="tempat_lahir" required></td>
+            </tr>
+            <tr>
+                <td><strong>Tanggal Lahir</strong></td>
+                <td>:</td>
+                <td><input type="date" name="ttl" required></td>
+            </tr>
+            <tr>
+                <td><strong>Alamat</strong></td>
+                <td>:</td>
+                <td><textarea name="alamat" rows="3" required></textarea></td>
+            </tr>
+            <tr>
+                <td><strong>No. HP / WhatsApp</strong></td>
+                <td>:</td>
+                <td><input type="text" name="hp" required></td>
+            </tr>
+            <tr>
+                <td><strong>Email</strong></td>
+                <td>:</td>
+                <td><input type="email" name="email" required></td>
+            </tr>
+            <tr>
+                <td><strong>Asal Sekolah</strong></td>
+                <td>:</td>
+                <td><input type="text" name="asal_sekolah" required></td>
+            </tr>
+            <tr>
+                <td><strong>Program Studi</strong></td>
+                <td>:</td>
+                <td>
+                    <select name="prodi" required>
+                        <option value="">-- Pilih Prodi --</option>
+                        <option value="Sistem Informasi">Sistem Informasi</option>
+                        <option value="Teknologi Informasi">Teknologi Informasi</option>
+                        <option value="Manajemen">Manajemen</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Username</strong></td>
+                <td>:</td>
+                <td><input type="text" name="username" required></td>
+            </tr>
+            <tr>
+                <td><strong>Password</strong></td>
+                <td>:</td>
+                <td><input type="password" name="password" required></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td class="btn-group">
+                    <button type="submit">Kirim Pendaftaran</button>
+                    <button type="reset">Reset</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <hr>
+    <footer>© 2025 Sistem Pendaftaran Mahasiswa</footer>
+</div>
+
+</body>
+</html>
